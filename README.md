@@ -133,9 +133,9 @@ Temperature decimal
 Checksum
 ```
 
-The firmware calculates the checksum from the first four bytes and compares it with the checksum transmitted by the sensor.
+[optional]The firmware calculates the checksum from the first four bytes and compares it with the checksum transmitted by the sensor.
 
-Only measurements that pass checksum validation are used for display and MQTT publishing.
+[optional]Only measurements that pass checksum validation are used for display and MQTT publishing.
 
 ### OLED — I²C3
 
@@ -310,9 +310,9 @@ Start TIM6
 Read DHT11
    │
    ▼
-Calculate and validate checksum
+[optional] Calculate and validate checksum
    │
-   ├── Invalid ──► Ignore measurement
+   ├── [optional] Invalid ──► Ignore measurement
    │
    ▼
 Display measurement on OLED
